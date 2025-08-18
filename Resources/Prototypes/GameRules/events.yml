@@ -581,7 +581,7 @@
         factions:
         - Syndicate
       mindRoles:
-      - MindRoleNukeops
+      - MindRoleLoneops
   - type: DynamicRuleCost
     cost: 75
 
