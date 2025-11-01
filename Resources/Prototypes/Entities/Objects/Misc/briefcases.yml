@@ -48,7 +48,7 @@
   name: brown briefcase
   components:
   - type: Sprite
-    sprite: _Erida/Holidays/halloween/pumpkin_bucket/bucket_scary.rsi.rsi
+    sprite: _Erida/Holidays/halloween/pumpkin_bucket/bucket_scary.rsi
     state: icon
   - type: Item
     sprite: _Erida/Holidays/halloween/pumpkin_bucket/bucket_relaxed.rsi
