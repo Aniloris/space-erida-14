@@ -587,6 +587,11 @@ private void SendEntityWhisper(
                 continue;
             listener = session.AttachedEntity.Value;
 
+            // Erida-start
+            if (!TryComp<VisibilityComponent>(source, out var visibility) || !TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask)
+                continue;
+            // Erida-end
+
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
@@ -837,6 +842,11 @@ private void SendEntityWhisper(
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
             var listener = session.AttachedEntity.Value;
+
+            // Erida-start
+            if (!TryComp<VisibilityComponent>(source, out var visibility) || !TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask)
+                continue;
+            // Erida-end
 
             var canUnderstand = _language.CanUnderstand(listener, language.ID);
             // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
