@@ -260,7 +260,7 @@
     - Hardsuit
     - WhitelistChameleon
   - type: StaminaResistance # Erida
-    damageCoefficient: 0.4
+    damageCoefficient: 0.55
 
 #Brigmedic Hardsuit
 - type: entity
@@ -291,7 +291,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
   - type: StaminaResistance # Erida
-    damageCoefficient: 0.4
+    damageCoefficient: 0.55
 
 #Warden's Hardsuit
 - type: entity
@@ -324,7 +324,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWarden
   - type: StaminaResistance # Erida
-    damageCoefficient: 0.35
+    damageCoefficient: 0.5
 
 #Captain's Hardsuit
 - type: entity
@@ -514,7 +514,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed
   - type: StaminaResistance # Erida
-    damageCoefficient: 0.35
+    damageCoefficient: 0.4
 
 #Luxury Mining Hardsuit
 - type: entity
