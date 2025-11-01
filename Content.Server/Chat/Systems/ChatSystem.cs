@@ -588,8 +588,8 @@ private void SendEntityWhisper(
             listener = session.AttachedEntity.Value;
 
             // Erida-start
-            if (!TryComp<VisibilityComponent>(source, out var visibility) || !TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask)
-                continue;
+            if (TryComp<VisibilityComponent>(source, out var visibility))
+                if (!TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask) continue;
             // Erida-end
 
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
@@ -844,8 +844,8 @@ private void SendEntityWhisper(
             var listener = session.AttachedEntity.Value;
 
             // Erida-start
-            if (!TryComp<VisibilityComponent>(source, out var visibility) || !TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask)
-                continue;
+            if (TryComp<VisibilityComponent>(source, out var visibility))
+                if (!TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask) continue;
             // Erida-end
 
             var canUnderstand = _language.CanUnderstand(listener, language.ID);
