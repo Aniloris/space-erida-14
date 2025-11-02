@@ -24,8 +24,6 @@
     tags:
     - ClothMade
     - WhitelistChameleon
-  - type: SlotBlock
-    blockList: [ MASK, EARS, EYES ]
 
 - type: entity
   abstract: true
@@ -106,6 +104,8 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot {}
+  - type: SlotBlock
+    blockList: [ MASK, EARS, EYES ]
 
 - type: entity
   abstract: true
@@ -143,6 +143,8 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: SlotBlock
+    blockList: [ MASK, EARS, EYES ]
 
 - type: entity
   abstract: true
