@@ -507,9 +507,9 @@
   productEntity: PlasmaScythe
   discountCategory: veryRareDiscounts
   discountDownTo:
-    TelecrystalOrange: 10
+    TelecrystalOrange: 14
   cost:
-    TelecrystalOrange: 15
+    TelecrystalOrange: 18
   categories:
   - UplinkWeaponry
   conditions:
