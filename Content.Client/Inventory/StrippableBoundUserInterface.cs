@@ -252,29 +252,26 @@ namespace Content.Client.Inventory
             bool[] inventoryIgnored = new bool[2]; // [shouldShowBlocked, shouldShowHided]
             inventoryIgnored = _strippable.IsInventoryIgnored(_player.LocalEntity);
 
-            if (entity != null)
+            if (!inventoryIgnored[0])
             {
-                if (!inventoryIgnored[0])
+                foreach (var blockedSlot in inv.BlockList)
                 {
-                    foreach (var blockedSlot in inv.BlockList)
+                    if (blockedSlot == slotDef.SlotFlags)
                     {
-                        if (blockedSlot == slotDef.SlotFlags)
-                        {
-                            entity = _virtualBlockedEntity;
-                            button.Blocked = true;
-                            break;
-                        }
+                        entity = _virtualBlockedEntity;
+                        button.Blocked = true;
+                        break;
                     }
                 }
-                if (!inventoryIgnored[1])
+            }
+            if (!inventoryIgnored[1])
+            {
+                foreach (var hidedSlot in inv.HideList)
                 {
-                    foreach (var hidedSlot in inv.HideList)
+                    if (hidedSlot == slotDef.SlotFlags)
                     {
-                        if (hidedSlot == slotDef.SlotFlags)
-                        {
-                            entity = _virtualBlockedEntity;
-                            break;
-                        }
+                        entity = _virtualBlockedEntity;
+                        break;
                     }
                 }
             }
