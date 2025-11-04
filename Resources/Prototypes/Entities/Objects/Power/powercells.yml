@@ -227,7 +227,7 @@
     startingCharge: 720
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: # Erida
+    autoRechargeRate: 7 # Erida
 
 - type: entity
   parent: PowerCellMicroreactor
