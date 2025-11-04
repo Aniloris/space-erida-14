@@ -110,7 +110,8 @@ namespace Content.Server.Carrying
                 Text = Loc.GetString("carry-verb"),
                 Priority = 2
             };
-            args.Verbs.Add(verb);
+            // Erida - Fix this system
+            // args.Verbs.Add(verb);
         }
 
         /// <summary>
