@@ -24,7 +24,7 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
         if (!TryComp<ActorComponent>(GetEntity(args.Source), out var sourceActor) ||
             !TryComp<ActorComponent>(GetEntity(args.Target), out var targetActor) ||
             !TryComp<DirectionalEmoteTargetComponent>(GetEntity(args.Source), out var directEmote)) return;
-        Logger.Debug("Отравбоа");
+
         var curTime = _gameTicking.CurTime;
         if (directEmote.LastSend + directEmote.Cooldown > curTime) return;
 
