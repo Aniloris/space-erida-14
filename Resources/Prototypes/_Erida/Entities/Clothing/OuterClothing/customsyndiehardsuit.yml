@@ -1,7 +1,7 @@
 - type: entity
   parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
   id: ClothingOuterHardsuitSyndieCustom
-  name: Чёрный скафандр
+  name: чёрный скафандр
   description: Модифицированный скафандр Мародёров Горлекса, перекрашенный в чёрный цвет. Собственность коротколапки
   components:
   - type: Sprite

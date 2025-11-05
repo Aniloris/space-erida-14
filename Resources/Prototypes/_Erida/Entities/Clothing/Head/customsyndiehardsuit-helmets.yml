@@ -1,7 +1,7 @@
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitSyndieCustom
-  name: Чёрный шлем скафандра
+  name: чёрный шлем скафандра
   description: Модифицированный шлем скафандра Мародёров Горлекса, перекрашенный в чёрный цвет. Собственность коротколапки
   components:
   - type: Sprite
