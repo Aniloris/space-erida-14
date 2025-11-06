@@ -1,8 +1,8 @@
 - type: entity
+  parent: BaseItem
+  id: EnergyDomeGeneratorPersonalSyndie
   name: blood red personal shield generator
   description: A personal shield generator that protects the wearer from lasers and bullets but prevents from using ranged weapons himself. Uses a power cell.
-  id: EnergyDomeGeneratorPersonalSyndie
-  parent: BaseItem
   components:
   - type: Item
     size: Ginormous
@@ -38,10 +38,10 @@
     delay: 10.0
 
 - type: entity
+  parent: BaseItem
+  id: EnergyDomeDirectionalTurtle
   name: BR-40c "Turtle"
   description: A two-handed and heavy energy barrier with extremely low passive energy consumption. Can be tethered with a multitool.
-  id: EnergyDomeDirectionalTurtle
-  parent: BaseItem
   components:
   - type: Sprite
     sprite: _Erida/Objects/Tools/EnergyDome/reinhardt.rsi
@@ -100,10 +100,10 @@
     - Off
 
 - type: entity
+  parent: BaseItem
+  id: EnergyDomeGeneratorPersonalNT
   name: BT-21b "Barrier"
   description: A personal shield generator that protects the wearer from lasers and bullets but prevents from using ranged weapons himself. Uses a power cell.
-  id: EnergyDomeGeneratorPersonalNT
-  parent: BaseItem
   components:
   - type: Item
     size: Ginormous
