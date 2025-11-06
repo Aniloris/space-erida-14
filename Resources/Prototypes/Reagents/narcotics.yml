@@ -14,7 +14,7 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: 1.75 # Erida
+            Poison: 1.25 # Erida
             Asphyxiation: 1
       - !type:HealthChange
         conditions:
