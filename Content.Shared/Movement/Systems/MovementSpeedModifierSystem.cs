@@ -120,8 +120,32 @@ namespace Content.Shared.Movement.Systems
                 MathHelper.CloseTo(ev.SprintSpeedModifier, move.SprintSpeedModifier))
                 return;
 
-            move.WalkSpeedModifier = ev.WalkSpeedModifier;
-            move.SprintSpeedModifier = ev.SprintSpeedModifier;
+            // Erida edit start
+            if (move.WalkSpeedModifier < ev.WalkSpeedModifier || move.SprintSpeedModifier < ev.SprintSpeedModifier)
+            {
+                // The threshold beyond which the modifier will decrease  (always add + 0.3f from if else when calculating real threshold)
+                var speedThreshold = 1.20f;
+
+                if (ev.SprintSpeedModifier > speedThreshold && ev.SprintSpeedModifier - speedThreshold > 0.3)
+                {
+                    var excess = ev.SprintSpeedModifier - speedThreshold;
+                    move.SprintSpeedModifier = speedThreshold + (float)Math.Round(Math.Exp(-3 * excess), 2);
+                }
+                else { move.SprintSpeedModifier = ev.SprintSpeedModifier; }
+
+                if (ev.WalkSpeedModifier > speedThreshold && ev.WalkSpeedModifier - speedThreshold > 0.3)
+                {
+                    var excess = ev.WalkSpeedModifier - speedThreshold;
+                    move.WalkSpeedModifier = speedThreshold + (float)Math.Round(Math.Exp(-3 * excess), 2);
+                }
+                else { move.WalkSpeedModifier = ev.WalkSpeedModifier; }
+            }
+            else
+            {
+                move.WalkSpeedModifier = ev.WalkSpeedModifier;
+                move.SprintSpeedModifier = ev.SprintSpeedModifier;
+            }
+            // Erida edit end
             Dirty(uid, move);
         }
 
