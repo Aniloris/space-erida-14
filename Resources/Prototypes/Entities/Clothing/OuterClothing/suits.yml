@@ -70,6 +70,8 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideLayerClothing # Erida edit
+    layers: { Tail: OUTERCLOTHING }
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -131,6 +133,8 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideLayerClothing # Erida edit
+    layers: { Tail: OUTERCLOTHING }
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseMajorContraband]

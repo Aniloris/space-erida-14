@@ -154,6 +154,8 @@
   - type: SlotBlock
     blockList: [ UNDERWEAR, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, GLOVES, SOCKS, FEET ]
     hideList: [ IDCARD, POCKET ]
+  - type: HideLayerClothing
+    layers: { Tail: OUTERCLOTHING }
 
 - type: entity
   abstract: true
@@ -183,6 +185,8 @@
   - type: SlotBlock
     blockList: [ UNDERWEAR, SOCKS, UNDERSHIRT, UNDERPANTS, FEET, LEGS, GLOVES, INNERCLOTHING, FEET ]
     hideList: [ IDCARD, POCKET ]
+  - type: HideLayerClothing # Erida edit
+    layers: { Tail: OUTERCLOTHING } # Erida edit
 
 - type: entity
   parent: ClothingOuterBase
