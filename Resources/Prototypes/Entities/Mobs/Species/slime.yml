@@ -127,10 +127,10 @@
   - type: LanguageKnowledge #backmen: languages
     speaks:
     - TauCetiBasic
-    - Bubblish
+    - Slime
     understands:
     - TauCetiBasic
-    - Bubblish
+    - Slime
 
 - type: entity
   parent: MobHumanDummy
