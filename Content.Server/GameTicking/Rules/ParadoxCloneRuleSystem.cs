@@ -7,6 +7,9 @@ using Content.Shared.GameTicking.Components;
 using Content.Shared.Gibbing.Components;
 using Content.Shared.Medical.SuitSensor;
 using Content.Shared.Mind;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Station.Components;
+using Microsoft.CodeAnalysis;
 using Robust.Shared.Random;
 
 namespace Content.Server.GameTicking.Rules;
@@ -61,15 +64,37 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
             // get possible targets
             var allAliveHumanoids = _mind.GetAliveHumans();
 
-            // we already checked when starting the gamerule, but someone might have died since then.
             if (allAliveHumanoids.Count == 0)
             {
                 Log.Warning("Could not find any alive players to create a paradox clone from!");
                 return;
             }
 
-            // pick a random player
-            var randomHumanoidMind = _random.Pick(allAliveHumanoids);
+            // Erida edit start
+            // Selecting a random target that is at the station and alive
+            Entity<MindComponent> randomHumanoidMind;
+            do
+            {
+                randomHumanoidMind = _random.Pick(allAliveHumanoids);
+
+                if (TryComp<TransformComponent>(randomHumanoidMind.Comp.OwnedEntity, out var xform)
+                    && CompOrNull<StationMemberComponent>(xform.GridUid) != null
+                    && TryComp<MobStateComponent>(randomHumanoidMind.Comp.OwnedEntity, out var mobStateComponent)
+                    && mobStateComponent.CurrentState != Shared.Mobs.MobState.Dead)
+                {
+                    break;
+                }
+                allAliveHumanoids.Remove(randomHumanoidMind);
+            }
+            while (allAliveHumanoids.Count != 0);
+            // Erida edit end
+
+            if (allAliveHumanoids.Count == 0)
+            {
+                Log.Warning("Could not find any alive players to create a paradox clone from!");
+                return;
+            }
+
             ent.Comp.OriginalMind = randomHumanoidMind;
             ent.Comp.OriginalBody = randomHumanoidMind.Comp.OwnedEntity;
 
