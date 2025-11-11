@@ -16,10 +16,10 @@
   - type: LanguageKnowledge #backmen: languages
     speaks:
     - TauCetiBasic
-    - Shadowkin
+    - Mar
     understands:
     - TauCetiBasic
-    - Shadowkin
+    - Mar
   - type: HumanoidAppearance
     eyeColor: '#ffffff'
     species: Shadowkin
