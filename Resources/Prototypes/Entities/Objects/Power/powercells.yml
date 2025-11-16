@@ -223,8 +223,8 @@
       state: o2
       shader: unshaded
   - type: Battery
-    maxCharge: 360 # Erida
-    startingCharge: 720
+    maxCharge: 720 # Erida
+    startingCharge: 720 # Erida
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 7 # Erida
