@@ -15,6 +15,7 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
     [Dependency] private readonly IGameTiming _gameTicking = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly ChatBrainRotSystem _chatBrainRotSystem = default!;
 
     public override void Initialize()
     {
@@ -51,6 +52,7 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
 
         _chatManager.ChatMessageToMany(ChatChannel.Emotes, args.Text, wrappedMessage, source, false, true, [targetActor.PlayerSession.Channel, sourceActor.PlayerSession.Channel]);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(source):source} send directional emote to {ToPrettyString(target):target}: {args.Text}");
+        _chatBrainRotSystem.CheckBrainRot(source, args.Text);
         directEmote.LastSend = curTime;
     }
 }
