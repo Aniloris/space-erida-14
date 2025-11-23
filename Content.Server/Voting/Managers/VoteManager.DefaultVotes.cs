@@ -305,13 +305,13 @@ namespace Content.Server.Voting.Managers
                 }
 
                 _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Map vote finished: {picked.MapName}");
-                _cooldownMaps.Add(picked.ID, _cfg.GetCVar(CCVars.MapHideDuration)); // Erida
                 var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
                 if (ticker.CanUpdateMap())
                 {
                     if (_gameMapManager.TrySelectMapIfEligible(picked.ID))
                     {
                         ticker.UpdateInfoText();
+                        _cooldownMaps.Add(picked.ID, _cfg.GetCVar(CCVars.MapHideDuration)); // Erida
                     }
                 }
                 else
