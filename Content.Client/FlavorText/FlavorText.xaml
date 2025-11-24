@@ -190,7 +190,7 @@
                 </PanelContainer>
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
                     <controls:StripeBack>
-                        <Label Text="{Loc 'humanoid-profile-editor-flavor-ooc-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
+                        <Label Text="{Loc 'humanoid-profile-editor-flavor-nsfw-ooc-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
                     </controls:StripeBack>
                     <PanelContainer StyleClasses="Inset" Margin="5" HorizontalExpand="True" VerticalExpand="True">
                         <PanelContainer.PanelOverride>
@@ -209,7 +209,7 @@
                 </PanelContainer>
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="False">
                     <controls:StripeBack>
-                        <Label Text="{Loc 'humanoid-profile-editor-flavor-tags-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
+                        <Label Text="{Loc 'humanoid-profile-editor-flavor-nsfw-tags-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
                     </controls:StripeBack>
                     <PanelContainer StyleClasses="Inset" Margin="5" HorizontalExpand="True" VerticalExpand="False">
                         <PanelContainer.PanelOverride>
@@ -228,7 +228,7 @@
                 </PanelContainer>
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
                     <controls:StripeBack>
-                        <Label Text="{Loc 'humanoid-profile-editor-flavor-links-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
+                        <Label Text="{Loc 'humanoid-profile-editor-flavor-nsfw-links-label'}" StyleClasses="LabelBig" Margin="5,0,0,0" HorizontalAlignment="Left" />
                     </controls:StripeBack>
                     <PanelContainer StyleClasses="Inset" Margin="5" HorizontalExpand="True" VerticalExpand="False">
                         <PanelContainer.PanelOverride>
