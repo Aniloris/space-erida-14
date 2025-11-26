@@ -30,20 +30,13 @@ public sealed class MasochistSystem : EntitySystem
         // TODO add debaff after total damage limit is reached
         foreach (var damage in args.DamageDelta.DamageDict)
         {
-            switch (damage.Key)
-            {
-                case "Blunt" when damageable.Damage["Blunt"] >= ent.Comp.BluntDamageLimit:
-                    continue;
-                case "Thermal" when damageable.Damage["Thermal"] >= ent.Comp.ThermalDamageLimit:
-                    continue;
-                case "Piercing" when damageable.Damage["Piercing"] >= ent.Comp.PiercingDamageLimit:
-                    continue;
-                case "Shock" when damageable.Damage["Shock"] >= ent.Comp.ShockDamageLimit:
-                    continue;
-                default:
-                    _arousalSystem.IncreaseArousal(ent.Owner, damage.Value.Float() * ent.Comp.ArousalPerDamageModifier);
-                    break;
-            }
+            if (!ent.Comp.DamageThreshold.ContainsKey(damage.Key))
+                continue;
+
+            if (ent.Comp.DamageThreshold[damage.Key] <= damageable.Damage[damage.Key])
+                continue;
+
+            _arousalSystem.IncreaseArousal(ent.Owner, damage.Value.Float() * ent.Comp.ArousalPerDamageModifier);
         }
     }
 }

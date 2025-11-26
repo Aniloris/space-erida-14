@@ -8,15 +8,18 @@ namespace Content.Shared._Erida.Traits.Masochist
     [RegisterComponent, NetworkedComponent]
     public sealed partial class MasochistComponent : Component
     {
-        /// The degree of damage after which arousal doesnt increase.
+        /// <summary>
+        /// List of damage thresholds that will cause arousal
+        /// DamageType : Threshold
+        /// </summary>
         [DataField]
-        public float BluntDamageLimit = 25f;
-        [DataField]
-        public float ThermalDamageLimit = 20f;
-        [DataField]
-        public float PiercingDamageLimit = 20f;
-        [DataField]
-        public float ShockDamageLimit = 25f;
+        public Dictionary<string, float> DamageThreshold = new()
+        {
+            {"Blunt", 25f},
+            {"Thermal", 20f},
+            {"Piercing", 20f},
+            {"Shock", 25f}
+        };
 
         /// <summary>
         /// Multiplier for arousal increase per unit of damage taken.
