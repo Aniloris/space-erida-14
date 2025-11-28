@@ -10,5 +10,5 @@ trait-masochism-light-desc = Вы получаете удовольствие л
 trait-masochism-hardcore-name = Мазохист (hardcore)
 trait-masochism-hardcore-desc = Вы получаете удовольствие от сильной боли
 
-trait-streetrebel-name = Акцент уличного бунтаря
-trait-streetrebel-desc = Вероятно, вы выросли в большом городе и не в лучшей компании
+trait-street-rebel-name = Акцент уличного бунтаря
+trait-street-rebel-desc = Вероятно, вы выросли в большом городе и не в лучшей компании
