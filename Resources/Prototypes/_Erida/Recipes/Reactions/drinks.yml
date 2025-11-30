@@ -268,7 +268,7 @@
   reactants:
     Beer:
       amount: 1
-    Ice:
+    IceCream:
       amount: 1
   products:
     FrothyWater: 2
