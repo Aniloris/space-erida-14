@@ -49,3 +49,8 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 0
     baseWalkSpeed: 0
+  # Erida start
+  - type: Visibility
+    layer: 2
+  - type: MobState
+  # Erida end
