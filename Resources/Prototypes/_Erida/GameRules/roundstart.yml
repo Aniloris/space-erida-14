@@ -44,9 +44,9 @@
   - type: SubGamemodes
     rules:
     - id: Traitor
-      prob: 0.6
+      prob: 0.8
     - id: Thief
-      prob: 0.4
+      prob: 0.6
 
 - type: entity
   id: HardDynamicScheduler

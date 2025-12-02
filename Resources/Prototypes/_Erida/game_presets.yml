@@ -15,7 +15,6 @@
   showInVote: false
   description: light-dynamic-description
   rules:
-  - BasicCalmStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
