@@ -76,10 +76,9 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: true #2boring2vote
+  showInVote: false # Erida
   description: extended-description
   rules:
-  - BasicCalmStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
@@ -115,7 +114,6 @@
   showInVote: false #Admin Use
   description: secret-description
   rules:
-    - BasicStationEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
