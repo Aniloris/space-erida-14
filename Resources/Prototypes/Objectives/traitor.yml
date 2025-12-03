@@ -195,6 +195,9 @@
     job: ChiefMedicalOfficer
   - type: StealCondition
     owner: job-name-cmo
+  - type: NoOwnerRequirement
+    job:
+    - ChiefMedicalOfficer
 
 - type: entity
   parent: BaseCMOStealObjective
@@ -221,6 +224,9 @@
     job: ResearchDirector
   - type: StealCondition
     owner: job-name-rd
+  - type: NoOwnerRequirement
+    job:
+    - ResearchDirector
 
 - type: entity
   parent: BaseRDStealObjective
@@ -253,6 +259,9 @@
   - type: StealCondition
     stealGroup: WeaponEnergyShotgun
     owner: job-name-hos
+  - type: NoOwnerRequirement
+    job:
+    - HeadOfSecurity
 
 ## ce
 
@@ -265,6 +274,9 @@
   - type: StealCondition
     stealGroup: ClothingShoesBootsMagAdv
     owner: job-name-ce
+  - type: NoOwnerRequirement
+    job:
+    - ChiefEngineer
 
 ## qm
 
@@ -277,6 +289,9 @@
   - type: StealCondition
     stealGroup: BoxFolderQmClipboard
     owner: job-name-qm
+  - type: NoOwnerRequirement
+    job:
+    - Quartermaster
 
 - type: entity
   parent: BaseTraitorStealObjective
@@ -287,6 +302,9 @@
   - type: StealCondition
     stealGroup: ClothingHandsKnuckleDustersQM
     owner: job-name-qm
+  - type: NoOwnerRequirement
+    job:
+    - Quartermaster
 
 ## hop
 
@@ -301,6 +319,9 @@
   - type: StealCondition
     stealGroup: FoodMeatCorgi
     owner: objective-condition-steal-Ian
+  - type: NoOwnerRequirement
+    job:
+    - HeadOfPersonnel
 
 ## cap
 
