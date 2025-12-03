@@ -19,11 +19,11 @@
       - !type:ModifyLungGas
         scaling: true
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [Shadowkin]
           shouldHave: false
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [Vox]
           shouldHave: false
         ratios:
           CarbonDioxide: 1.0
@@ -56,11 +56,11 @@
       - !type:ModifyLungGas
         scaling: true
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [Shadowkin]
           shouldHave: false
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [Vox]
           shouldHave: false
         ratios:
           CarbonDioxide: 1.0
@@ -185,14 +185,14 @@
           type: [ Plant ]
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Plant
+        - !type:MetabolizerTypeCondition
+          type: [Plant]
           shouldHave: false
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [Vox]
           shouldHave: false
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [Shadowkin]
           shouldHave: false
         scaleByQuantity: true
         ignoreResistances: true
@@ -217,14 +217,14 @@
       - !type:HealthChange
         minScale: 1
         conditions:
-        - !type:OrganType
-          type: Plant
+        - !type:MetabolizerTypeCondition
+          type: [ Plant ]
           shouldHave: false
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [ Vox ]
           shouldHave: false
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
         # Don't want people to get toxin damage from the gas they just
         # exhaled, right?
@@ -272,11 +272,11 @@
       - !type:ModifyLungGas
         scaling: true
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [ Vox ]
         ratios:
           Ammonia: 1.0
           Nitrogen: -1.0

@@ -1,6 +1,7 @@
 using System.Collections.Frozen;
 using System.Text.RegularExpressions;
 using Content.Shared.ActionBlocker;
+using Content.Shared.Backmen.Language;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Popups;
 using Content.Shared.Radio;
@@ -40,12 +41,12 @@ public abstract partial class SharedChatSystem : EntitySystem
     // Corvax-TTS-End
 
     [ValidatePrototypeId<RadioChannelPrototype>]
-    public const string CommonChannel = "Common";
+    public static readonly ProtoId<RadioChannelPrototype> CommonChannel = "Common";
 
     public static string DefaultChannelPrefix = $"{RadioChannelPrefix}{DefaultChannelKey}";
 
     [ValidatePrototypeId<SpeechVerbPrototype>]
-    public const string DefaultSpeechVerb = "Default";
+    public static readonly ProtoId<SpeechVerbPrototype> DefaultSpeechVerb = "Default";
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -63,7 +64,6 @@ public abstract partial class SharedChatSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
         DebugTools.Assert(_prototypeManager.HasIndex(CommonChannel));
 
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypeReload);
@@ -351,7 +351,8 @@ public abstract partial class SharedChatSystem : EntitySystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false)
+        bool ignoreActionBlocker = false,
+        LanguagePrototype? languageOverride = null)
     { }
 
     /// <summary>
@@ -376,7 +377,8 @@ public abstract partial class SharedChatSystem : EntitySystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false
+        bool ignoreActionBlocker = false,
+        LanguagePrototype? languageOverride = null
         )
     { }
 

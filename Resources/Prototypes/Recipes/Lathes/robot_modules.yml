@@ -48,13 +48,6 @@
   result: BorgModuleArtistry
 
 # Cargo Modules
-
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleInflatable
-  result: BorgModuleInflatable
-
-# Cargo Modules
 #
 #- type: latheRecipe
 #  parent: BaseGoldBorgModuleRecipe

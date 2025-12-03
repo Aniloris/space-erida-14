@@ -3,7 +3,6 @@ using Content.Shared.Chat;
 using Content.Shared.Trigger;
 using Content.Shared.Trigger.Components.Effects;
 using Robust.Shared.Prototypes;
-using Content.Shared.Backmen.Chat;
 using Robust.Shared.Random;
 
 namespace Content.Server.Trigger.Systems;

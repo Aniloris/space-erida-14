@@ -1,3 +1,4 @@
+using Content.Shared.Backmen.Language;
 using Content.Shared.Inventory;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
@@ -58,19 +59,23 @@ public sealed class EntitySpokeEvent : EntityEventArgs
 {
     public readonly EntityUid Source;
     public readonly string Message;
+    public readonly string OriginalMessage;
     public readonly string? ObfuscatedMessage; // not null if this was a whisper
+    public readonly LanguagePrototype? Language;
 
     /// <summary>
-    /// If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
-    /// message gets sent on this channel, this should be set to null to prevent duplicate messages.
+    ///     If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
+    ///     message gets sent on this channel, this should be set to null to prevent duplicate messages.
     /// </summary>
     public RadioChannelPrototype? Channel;
 
-    public EntitySpokeEvent(EntityUid source, string message, RadioChannelPrototype? channel, string? obfuscatedMessage)
+    public EntitySpokeEvent(EntityUid source, string message, string originalMessage, RadioChannelPrototype? channel = null, string? obfuscatedMessage = null, LanguagePrototype? language = null)
     {
         Source = source;
         Message = message;
+        OriginalMessage = originalMessage; // Corvax-TTS: Spec symbol sanitize
         Channel = channel;
         ObfuscatedMessage = obfuscatedMessage;
+        Language = language;
     }
 }

@@ -4,7 +4,6 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
 using Content.Server.Afk;
-using Content.Server.BugReports;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Corvax.TTS;
@@ -14,7 +13,6 @@ using Content.Server.Discord.DiscordLink;
 using Content.Server.Discord.WebhookMessages;
 using Content.Server.EUI;
 using Content.Server.GhostKick;
-using Content.Server.Github;
 using Content.Server.Info;
 using Content.Server.Mapping;
 using Content.Server.Maps;
@@ -84,12 +82,12 @@ internal static class ServerContentIoC
         deps.Register<CVarControlManager>();
         deps.Register<DiscordLink>();
         deps.Register<DiscordChatLink>();
-        IoCManager.Register<TTSManager>(); // Corvax-TTS
-        IoCManager.Register<ChatProtectionSystem>(); // Orion
+        deps.Register<TTSManager>(); // Corvax-TTS
+        deps.Register<ChatProtectionSystem>(); // Orion
         // start-backmen: IoC
-        IoCManager.Register<Content.Corvax.Interfaces.Server.IServerDiscordAuthManager, Backmen.DiscordAuth.DiscordAuthManager>();
-        IoCManager.Register<Content.Corvax.Interfaces.Server.IServerJoinQueueManager, Backmen.JoinQueue.JoinQueueManager>();
+        deps.Register<Content.Corvax.Interfaces.Server.IServerDiscordAuthManager, Backmen.DiscordAuth.DiscordAuthManager>();
+        deps.Register<Content.Corvax.Interfaces.Server.IServerJoinQueueManager, Backmen.JoinQueue.JoinQueueManager>();
         // end-backmen: IoC
-        IoCManager.Register<ChatBrainRotSystem>(); // Erida
+        deps.Register<ChatBrainRotSystem>(); // Erida
     }
 }

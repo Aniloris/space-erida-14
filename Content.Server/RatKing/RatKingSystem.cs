@@ -1,7 +1,6 @@
 using System.Numerics;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Systems;
-using Content.Shared.Backmen.Chat;
 using Content.Server.NPC;
 using Content.Server.NPC.HTN;
 using Content.Server.NPC.Systems;

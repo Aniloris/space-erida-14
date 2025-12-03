@@ -261,11 +261,7 @@
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
-<<<<<<< HEAD
     # dynamicPacks: # Backmen-EDIT
-=======
-    dynamicPacks:
->>>>>>> cdbe92d37d65b6adc89d45f66825ad502ad4549f
     - EngineeringBoards
     - CargoBoards
     - MedicalBoards

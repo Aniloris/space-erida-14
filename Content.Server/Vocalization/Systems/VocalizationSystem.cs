@@ -1,4 +1,3 @@
-using Content.Shared.Backmen.Chat;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Vocalization.Components;

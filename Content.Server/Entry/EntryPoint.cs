@@ -4,7 +4,6 @@ using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
-using Content.Server.BugReports;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Corvax.TTS;
@@ -13,7 +12,6 @@ using Content.Server.Discord.DiscordLink;
 using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.GhostKick;
-using Content.Server.Github;
 using Content.Server.GuideGenerator;
 using Content.Server.Info;
 using Content.Server.IoC;
@@ -80,11 +78,11 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerApi _serverApi = default!;
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
-        private ChatProtectionSystem _chatProtection = default!; // Orion
+        [Dependency] private readonly ChatProtectionSystem _chatProtection = default!; // Orion
 
         public override void PreInit()
         {
-            ServerContentIoC.Register();
+            ServerContentIoC.Register(Dependencies);
             foreach (var callback in TestingCallbacks)
             {
                 var cast = (ServerModuleTestingCallbacks)callback;

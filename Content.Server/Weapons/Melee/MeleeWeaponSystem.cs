@@ -1,5 +1,4 @@
 using Content.Server.Chat.Systems;
-using Content.Shared.Backmen.Chat;
 using Content.Server.Movement.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Effects;

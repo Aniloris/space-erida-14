@@ -579,9 +579,6 @@
   id: EncryptionKeyLaw
 
 - type: Tag
-  id: Enzyme
-
-- type: Tag
   id: FakeMindShieldImplant # Used by FakeMindShieldSystem to toggle the tagged action when a chameleon outfit is selected.
 
 - type: Tag
@@ -843,9 +840,6 @@
 
 - type: Tag
   id: Ingot # MaterialStorage whitelist for many machines and lathes. Storage whitelist: MaterialBag
-
-- type: Tag
-  id: InstantDoAfters
 
 - type: Tag
   id: Inflatable # Storage whitelist: BorgModuleInflatable

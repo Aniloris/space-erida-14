@@ -149,9 +149,6 @@
             "name": "Revolutionary"
         },
         {
-            "name": "HeadRevolutionary"
-        },
-        {
             "name": "Mime"
         },
         {
@@ -200,34 +197,13 @@
             "name": "ResearchDirector"
         },
         {
-            "name": "Revolutionary"
-        },
-        {
             "name": "Roboticist"
         },
         {
             "name": "Scientist"
         },
         {
-            "name": "SecurityCadet"
-        },
-        {
             "name": "SecurityOfficer"
-        },
-        {
-            "name": "SeniorEngineer"
-        },
-        {
-            "name": "SeniorOfficer"
-        },
-        {
-            "name": "SeniorPhysician"
-        },
-        {
-            "name": "SeniorResearcher"
-        },
-        {
-            "name": "ServiceWorker"
         },
         {
             "name": "ShaftMiner"
@@ -251,9 +227,6 @@
             "name": "SyndicateOperative"
         },
         {
-            "name": "TechnicalAssistant"
-        },
-        {
             "name": "Unknown"
         },
         {
@@ -267,12 +240,6 @@
         },
         {
             "name": "Wizard"
-        },
-        {
-            "name": "Zombie"
-        },
-        {
-            "name": "Zookeeper"
         }
     ]
 }

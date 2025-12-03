@@ -1,6 +1,5 @@
 using Content.Server.Atmos.Rotting;
 using Content.Server.Chat.Systems;
-using Content.Shared.Backmen.Chat;
 using Content.Server.DoAfter;
 using Content.Server.Electrocution;
 using Content.Server.EUI;

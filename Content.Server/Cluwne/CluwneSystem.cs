@@ -1,5 +1,4 @@
 using Content.Server.Chat;
-using Content.Shared.Backmen.Chat;
 using Content.Server.Chat.Systems;
 using Content.Server.Emoting.Systems;
 using Content.Server.Clothing.Systems;

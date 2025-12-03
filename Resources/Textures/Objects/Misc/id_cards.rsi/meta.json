@@ -8,9 +8,6 @@
     },
     "states": [
         {
-            "name": "default"
-        },
-        {
             "name": "sub_department"
         },
         {
@@ -21,9 +18,6 @@
         },
         {
             "name": "frame_default"
-        },
-        {
-            "name": "centcom"
         },
         {
             "name": "admin"

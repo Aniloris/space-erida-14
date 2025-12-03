@@ -487,9 +487,6 @@
     state: Pilot
   jobName: job-name-pilot
 
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconAdmin
 
 - type: jobIcon
   parent: JobIcon

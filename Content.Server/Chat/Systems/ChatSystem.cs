@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
-using Content.Server.Backmen.Chat;
 using Content.Server.Backmen.Language;
 using Content.Server.Chat.Managers;
 using Content.Server.Corvax.TTS;
@@ -18,7 +17,6 @@ using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
-using Content.Shared.Backmen.Chat;
 using Content.Shared.Backmen.Language;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
@@ -83,8 +81,8 @@ public sealed partial class ChatSystem : SharedChatSystem
     // public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     // public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     // Corvax-TTS-End
-    public const string DefaultAnnouncementSound = "/Audio/Corvax/Announcements/announce.ogg"; // Corvax-Announcements
-    public const string CentComAnnouncementSound = "/Audio/Corvax/Announcements/centcomm.ogg"; // Corvax-Announcements
+    public SoundSpecifier DefaultAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/announce.ogg"); // Corvax-Announcements
+    public SoundSpecifier CentComAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/centcomm.ogg"); // Corvax-Announcements
     //start-backmen: languages
     public const float DefaultObfuscationFactor = 0.2f; // Percentage of symbols in a whispered message that can be seen even by "far" listeners
     public readonly Color DefaultSpeakColor = Color.White;
@@ -276,8 +274,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
-            case InGameICChatType.Telepathic:
-                break;
         }
     }
 
@@ -352,8 +348,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (playSound)
         {
             if (sender == Loc.GetString("admin-announce-announcer-default"))
-                announcementSound = new SoundPathSpecifier(CentComAnnouncementSound); // Corvax-Announcements: Support custom alert sound from admin panel
-            announcementSound ??= new SoundPathSpecifier(DefaultAnnouncementSound);
+                announcementSound = CentComAnnouncementSound; // Corvax-Announcements: Support custom alert sound from admin panel
+            announcementSound ??= DefaultAnnouncementSound;
 
             var announcementFilename = _audio.GetSound(announcementSound);
             var announcementEv = new AnnouncementSpokeEvent(Filter.Broadcast(), announcementFilename, announcementSound?.Params
@@ -419,7 +415,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (announcementSound != null || playDefaultSound) // Corvax-TTS
         {
-            announcementSound ??= new SoundPathSpecifier(DefaultAnnouncementSound);
+            announcementSound ??= DefaultAnnouncementSound;
             var announcementEv = new AnnouncementSpokeEvent(filter, _audio.GetSound(announcementSound), AudioParams.Default.WithVolume(-2f), message);
             RaiseLocalEvent(announcementEv);
         }

@@ -161,16 +161,6 @@ public sealed partial class PolymorphSystem : EntitySystem
         QueueDel(ent.Comp.Parent);
     }
 
-    private void OnPolymorphedTerminating(Entity<PolymorphedEntityComponent> ent, ref EntityTerminatingEvent args)
-    {
-        if (ent.Comp.Configuration.RevertOnDelete)
-            Revert(ent.AsNullable());
-
-        // Remove our original entity too
-        // Note that Revert will set Parent to null, so reverted entities will not be deleted
-        QueueDel(ent.Comp.Parent);
-    }
-
     /// <summary>
     /// Polymorphs the target entity into the specific polymorph prototype
     /// </summary>

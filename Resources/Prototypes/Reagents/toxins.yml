@@ -319,8 +319,8 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
         damage:
           types:
@@ -328,8 +328,8 @@
       # Erida shadowkins tweak
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: true
         damage:
           types:
@@ -352,8 +352,8 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
         damage:
           groups:
@@ -361,8 +361,8 @@
       # Erida shadowkins tweak
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: true
         damage:
           types:
@@ -407,8 +407,8 @@
       # todo: cough, sneeze
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
         - !type:ReagentCondition
           reagent: Histamine
@@ -422,10 +422,11 @@
       # Erida shadowkins tweak
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: true
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Histamine
           min: 45
         damage:
           groups:
@@ -476,16 +477,16 @@
       # Erida shadowkins tweak
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
         damage:
           types:
             Poison: 0.4
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.04
         conditions:
-          - !type:OrganType
-            type: Shadowkin
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
       # Erida shadowkins tweak end
 
 - type: reagent
@@ -716,8 +717,8 @@
         sprintSpeedModifier: 0.8
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin # Erida shadowkins tweak
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: false
         damage:
           groups:
@@ -725,8 +726,8 @@
       # Erida shadowkins tweak
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Shadowkin
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
           shouldHave: true
         damage:
           types:

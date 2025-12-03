@@ -10,18 +10,18 @@
       effects:
       - !type:ModifyStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: BZ
           min: 1
-        - !type:OrganType
-          type: Slime
+        - !type:MetabolizerTypeCondition
+          type: [Slime]
         effectProto: StatusEffectSeeingRainbow
         time: 10
         type: Add
         refresh: false
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: BZ
           min: 1
         scaleByQuantity: true
@@ -31,32 +31,32 @@
             Cellular: 0.005
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: BZ
           min: 1
-        - !type:OrganType
-          type: Slime
+        - !type:MetabolizerTypeCondition
+          type: [Slime]
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: BZ
           min: 1
-        - !type:OrganType
-          type: Slime
+        - !type:MetabolizerTypeCondition
+          type: [Slime]
           shouldHave: true
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: BZ
           min: 1
-        - !type:OrganType
-          type: Slime
+        - !type:MetabolizerTypeCondition
+          type: [Slime]
         effectProto: StatusEffectForcedSleeping
         time: 3
         type: Add
@@ -76,27 +76,27 @@
       - !type:Oxygenate
         factor: 8
         conditions:
-        - !type:OrganType
-          type: Human
+        - !type:MetabolizerTypeCondition
+          type: [Human]
       - !type:Oxygenate
         factor: 8
         conditions:
-        - !type:OrganType
-          type: Animal
+        - !type:MetabolizerTypeCondition
+          type: [Animal]
       - !type:Oxygenate
         factor: 8
         conditions:
-        - !type:OrganType
-          type: Rat
+        - !type:MetabolizerTypeCondition
+          type: [Rat]
       - !type:Oxygenate
         factor: 8
         conditions:
-        - !type:OrganType
-          type: Plant
+        - !type:MetabolizerTypeCondition
+          type: [Plant]
       - !type:ModifyLungGas
         conditions:
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [Vox]
           shouldHave: false
         ratios:
           CarbonDioxide: 1.0
@@ -126,7 +126,7 @@
       effects:
       - !type:ModifyStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Healium
           min: 2
         effectProto: StatusEffectForcedSleeping
@@ -134,7 +134,7 @@
         type: Add
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Healium
           min: 0.5
         scaleByQuantity: true
@@ -158,13 +158,13 @@
     Gas:
       metabolismRate: 1.0
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         statusLifetime: 7
         walkSpeedModifier: 1.35
         sprintSpeedModifier: 1.35
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             reagent: Nitrium
             min: 65
         damage:
@@ -211,7 +211,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Zauker
           min: 0.25
         scaleByQuantity: true

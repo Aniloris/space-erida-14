@@ -1,5 +1,4 @@
 using Content.Server.Chat.Systems;
-using Content.Shared.Backmen.Chat;
 using Content.Server.Ghost.Components;
 using Content.Shared.Chat;
 using Content.Shared.Random.Helpers;

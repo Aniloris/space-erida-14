@@ -247,12 +247,6 @@
   - type: Appearance
 
 - type: entity
-  name: laser carbine
-  parent: [BaseLaserRifle, BaseGunWieldable, BaseSecurityContraband]
-  id: WeaponLaserCarbine
-  description: Favoured by Nanotrasen Security for being cheap and easy to use.
-
-- type: entity
   name: practice laser carbine
   parent: [BaseLaserRifle, BaseGunWieldable]
   id: WeaponLaserCarbinePractice
@@ -263,8 +257,6 @@
   - type: HitscanBatteryAmmoProvider
     proto: RedLaserPractice
     fireCost: 62.5
-  - type: StaticPrice
-    price: 300
   - type: PacifismAllowedGun
 
 - type: entity
