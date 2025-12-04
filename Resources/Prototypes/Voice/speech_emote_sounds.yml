@@ -486,6 +486,8 @@
       collection: Claps
     ClapSingle:
       collection: ClapSingle
+    Wink:
+      collection: Wink
     Snap:
       collection: Snaps
       params:
@@ -501,6 +503,8 @@
     # TODO: Replace this with a similar wood themed single clap
     ClapSingle:
       collection: ClapSingle
+    Wink:
+      collection: Wink
     Snap:
       path: /Audio/Voice/Diona/diona_snap.ogg
       params:
@@ -521,6 +525,8 @@
       collection: Claps
     ClapSingle:
       collection: ClapSingle
+    Wink:
+      collection: Wink
     Snap:
       collection: Snaps
       params:
@@ -611,6 +617,8 @@
       collection: Claps
     ClapSingle:
       collection: ClapSingle
+    Wink:
+      collection: Wink
     Snap:
       collection: Snaps
       params:
