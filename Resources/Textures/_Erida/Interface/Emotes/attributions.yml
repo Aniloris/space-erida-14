@@ -12,3 +12,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "purse.png has taken from https://github.com/AdventureTimeSS14/space_station_ADT and redacted by xkttty | growl.png is redacted purse.png by xkttty"
   source: "https://github.com/AdventureTimeSS14/space_station_ADT"
+
+- files: ["wink.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Modified from existing laugh texture (laugh.png) by Sarahon"
+  source: "https://github.com/Sarahon"
