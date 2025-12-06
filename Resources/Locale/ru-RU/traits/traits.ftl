@@ -65,5 +65,8 @@ trait-spanish-desc = Hola señor, как пройти в la biblioteca.
 trait-painnumbness-name = Невосприимчивость к боли
 trait-painnumbness-desc = Вы не чувствуете боли и не осознаёте, насколько вы ранены.
 
+trait-hemophilia-name = Гемофилия
+trait-hemophilia-desc = Ваш организм не справляется со свёртыванием крови.
+
 trait-impaired-mobility-name = Ограниченная подвижность
 trait-impaired-mobility-desc = Вы испытываете трудности в перемещении без сторонних предметов.
