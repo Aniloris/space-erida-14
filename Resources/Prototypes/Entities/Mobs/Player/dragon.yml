@@ -40,7 +40,7 @@
   - type: InputMover
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
-    baseSprintSpeed: 6.5
+    baseSprintSpeed: 6
     baseWeightlessModifier: 1.5
   - type: RandomSprite
     available:
@@ -100,14 +100,13 @@
       types: {}
   - type: StatusEffects # Overwriting basesimplemob to remove flash, getting flashed as dragon just feelsbad
     allowed:
-    - Stutter
     - Electrocution
     - TemporaryBlindness
     - Pacified
     - RadiationProtection
     - Adrenaline
   - type: Temperature
-    heatDamageThreshold: 800
+    heatDamageThreshold: 2400
   - type: Metabolizer
     solutionOnBody: false
     updateInterval: 0.25
@@ -132,8 +131,8 @@
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     damage:
       types:
-        Piercing: 30
-        Slash: 20
+        Piercing: 15
+        Slash: 25
   - type: Devourer
     foodPreferenceWhitelist:
       components:
