@@ -11,5 +11,5 @@
   - type: EntityTableContainerFill
     containers:
       storagebase:
-      - id: CigaretteSyndicate
+        id: CigaretteSyndicate
         amount: 10 # Erida edit end
