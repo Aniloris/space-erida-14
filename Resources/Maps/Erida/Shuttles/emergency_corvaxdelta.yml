@@ -959,6 +959,11 @@ entities:
           moles:
             Oxygen: 21.824879
             Nitrogen: 82.10312
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+            Oxygen: 21.824879
+            Nitrogen: 82.10312
         chunkSize: 4
     - type: OccluderTree
     - type: Shuttle

@@ -22437,7 +22437,7 @@ entities:
       - Engineering
       - Arsenal
       - Scientific
-      - CivilianServices
+      - Service
 - proto: ComputerShuttleCargo
   entities:
   - uid: 1070
@@ -50346,7 +50346,7 @@ entities:
       - Engineering
       - Arsenal
       - Scientific
-      - CivilianServices
+      - Service
 - proto: MedkitBruteFilled
   entities:
   - uid: 6464
@@ -51192,7 +51192,7 @@ entities:
 
         [bold]Sentencing Phase:[/bold]
 
-        If the death penalty was sought (you MUST have gone through a trial for death penalty) then skip to the second part. 
+        If the death penalty was sought (you MUST have gone through a trial for death penalty) then skip to the second part.
 
         I. Each side can present more evidence/witnesses in any order. There is NO ban on emotional aspects or anything. The prosecution is to submit a suggested penalty. After all the sides are done then the judicial authority is to give a sentence.
 
@@ -53865,7 +53865,7 @@ entities:
       - Engineering
       - Arsenal
       - Scientific
-      - CivilianServices
+      - Service
   - uid: 8479
     components:
     - type: Transform
@@ -53876,7 +53876,7 @@ entities:
       - Engineering
       - Arsenal
       - Scientific
-      - CivilianServices
+      - Service
 - proto: ProximitySensor
   entities:
   - uid: 828
@@ -63284,7 +63284,7 @@ entities:
       - Engineering
       - Arsenal
       - Scientific
-      - CivilianServices
+      - Service
 - proto: VendingMachineCart
   entities:
   - uid: 7787
