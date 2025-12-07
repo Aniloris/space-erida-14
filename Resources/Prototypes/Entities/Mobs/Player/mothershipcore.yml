@@ -236,6 +236,16 @@
   - type: ShowElectrocutionHUD
   - type: PowerMonitoringCableNetworks
   - type: RadarConsole
+  # Erida-start
+  - type: LanguageSpeaker
+    currentLanguage: Binary
+  - type: LanguageKnowledge
+    speaks:
+    - Binary
+    understands:
+    - Binary
+  # Erida-end
+
 
 - type: entity
   parent: BaseAGhostAction
