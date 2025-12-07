@@ -62,4 +62,5 @@
       prob: 0.3
     - id: Revolutionary
       prob: 0.3
-
+    - id: Xenoborgs
+      prob: 0.2
