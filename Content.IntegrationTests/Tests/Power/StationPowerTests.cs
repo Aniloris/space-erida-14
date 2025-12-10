@@ -21,29 +21,16 @@ public sealed class StationPowerTests
 
     private static readonly string[] GameMaps =
     [
-<<<<<<< HEAD
-=======
-        "Fland",
-        "Meta",
-        "Packed",
-        "Omega",
->>>>>>> parent of a5c223c0c3 (Trip APCs when they exceed a power limit (#41377))
         "Bagel",
         "Box",
         "Core",
         "Marathon",
-<<<<<<< HEAD
         "Oasis",
         "Packed",
-        "Plasma",
-        "Relic",
         "Snowball",
-=======
         "Saltern",
->>>>>>> parent of a5c223c0c3 (Trip APCs when they exceed a power limit (#41377))
         "Reach",
         "Train",
-        "Oasis",
         "Gate",
         "Amber",
         "Loop",
