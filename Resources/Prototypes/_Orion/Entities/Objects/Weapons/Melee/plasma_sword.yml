@@ -29,7 +29,7 @@
   - type: Welder
     fuelSolutionName: plasma
     fuelReagent: Plasma
-    fuelLitCost: 2
+    fuelLitCost: 1.5
   - type: RefillableSolution
     solution: plasma
   - type: SolutionContainerManager
@@ -115,8 +115,9 @@
       path: /Audio/_Orion/Weapons/Melee/plasma/plasma_swing.ogg
       params:
         variation: 0.125
+        volume: -10
     activatedDamage:
         types:
-            Slash: 12
-            Heat: 12
-            Structural: 15
+            Slash: 17.5
+            Heat: 17.5
+            Structural: 20
