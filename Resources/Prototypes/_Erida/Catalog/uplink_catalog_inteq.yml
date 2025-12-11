@@ -1552,6 +1552,25 @@
   categories:
   - UplinkDisruption
 
+- type: listing
+  id: UplinkInteQStarterKit
+  name: uplink-starter-kit-name
+  description: uplink-starter-kit-desc
+  productEntity: ClothingBackpackDuffelInteQFilledStarterKit
+  cost:
+    TelecrystalOrange: 40
+  categories:
+  - UplinkDisruption
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+        - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+        - SurplusBundle
+
 ##################
 # Implants
 ##################

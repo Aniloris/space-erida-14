@@ -78,7 +78,7 @@
     capacity: 60
     whitelist:
       tags:
-      - CartridgeLightRifleIncendiary
+      - CartridgeLightRifle
   - type: Sprite
     layers:
       - state: icon
