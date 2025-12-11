@@ -160,6 +160,8 @@
       collection: Claps
     ClapSingle:
       collection: ClapSingle
+    Wink:
+      collection: Wink
     Snap:
       collection: Snaps
       params:
