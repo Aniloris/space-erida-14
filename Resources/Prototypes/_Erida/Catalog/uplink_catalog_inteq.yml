@@ -113,7 +113,7 @@
   id: UplinkInteQHolster
   name: uplink-inteq-holster-name
   description: uplink-inteq-holster-desc
-  productEntity: ClothingBeltSyndieHolster
+  productEntity: ClothingBeltInteQHolster
   cost:
     TelecrystalOrange: 1
   categories:
@@ -1348,7 +1348,7 @@
   id: UplinkInteQBribe
   name: uplink-bribe-name
   description: uplink-bribe-desc
-  productEntity: BriefcaseSyndieLobbyingBundleFilled
+  productEntity: BriefcaseInteQLobbyingBundleFilled
   discountCategory: usualDiscounts
   discountDownTo:
     TelecrystalOrange: 2

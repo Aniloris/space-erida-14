@@ -50,7 +50,9 @@
     baseSprintSpeed: 0
     baseWalkSpeed: 0
   # Erida start
+  - type: Eye
+    visMask: 5
   - type: Visibility
-    layer: 2
+    layer: 5
   - type: MobState
   # Erida end

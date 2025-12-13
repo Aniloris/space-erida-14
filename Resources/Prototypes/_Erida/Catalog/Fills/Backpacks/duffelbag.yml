@@ -112,7 +112,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: DefibrillatorCompact
+      - id: DefibrillatorSyndicate
       - id: MedkitCombatFilled
         amount: 4
       - id: Tourniquet
