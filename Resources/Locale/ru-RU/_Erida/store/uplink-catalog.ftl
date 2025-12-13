@@ -216,11 +216,11 @@ uplink-inteq-box-encryption-key-desc = Два ключа шифрования д
 # Disruption
 ##################
 
-uplink-inteq-martyr-module-name= Оружейный модуль киборга
-uplink-inteq-martyr-module-desc = Модернизирует киборга с помощью мачете и продвинутого лазерного пистолета.
+uplink-inteq-weapon-module-name = Оружейный модуль киборга
+uplink-inteq-weapon-module-desc = Модернизирует киборга с помощью энергокинжала и продвинутого пистолета.
 
-uplink-inteq-weapon-module-name = Модуль киборга Мученик
-uplink-inteq-weapon-module-desc = Превратите с помощью этого модуля своего емагнутого друга-борга в ходячую бомбу. Убедитесь, что они верны вашему делу, результаты могут варьироваться.
+uplink-inteq-martyr-module-name = Модуль киборга Мученик
+uplink-inteq-martyr-module-desc = Превратите с помощью этого модуля своего емагнутого друга-борга в ходячую бомбу. Убедитесь, что они верны вашему делу, результаты могут варьироваться.
 
 uplink-inteq-soap-name = Мыло
 uplink-inteq-soap-desc = Натурально сворованное из чертежей InteQ!
