@@ -97,7 +97,11 @@ public sealed class VibratorSystem : EntitySystem
 
             if (_entityManager.HasComponent<ArousalComponent>(component.User.Value))
             {
-                _arousalSystem.IncreaseArousal(component.User.Value, component.ActiveArousalAmount);
+                var query2 = EntityQueryEnumerator<ArousalComponent>();
+                while (query2.MoveNext(out var uid2, out var component2))
+                {
+                    _arousalSystem.IncreaseArousal(uid2, component.ActiveArousalAmount);
+                }
             }
 
             if (_random.Next(1, 101) <= component.JitterProbablity)
