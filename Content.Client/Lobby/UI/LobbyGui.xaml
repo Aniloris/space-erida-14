@@ -33,7 +33,7 @@
                                                             WindowType="{x:Type lobbyUi:ObserveWarningWindow}" />
                                         <Label Name="StartTime"
                                                Access="Public"
-                                               Align="Left"
+                                               Align="Center"
                                                FontColorOverride="{x:Static maths:Color.DarkGray}"
                                                StyleClasses="LabelBig" HorizontalExpand="True" />
                                         <Button Name="ReadyButton" Access="Public" ToggleMode="True"
