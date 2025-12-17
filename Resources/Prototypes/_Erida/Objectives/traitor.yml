@@ -4,6 +4,9 @@
   components:
   - type: StealCondition
     stealGroup: AdvancedDefib
+  - type: NoOwnerRequirement
+    job:
+    - ChiefMedicalOfficer
 
 - type: entity
   parent: BaseTraitorStealObjective
@@ -12,3 +15,6 @@
   - type: StealCondition
     stealGroup: ProfessionalRCD
     owner: job-name-ce
+  - type: NoOwnerRequirement
+    job:
+    - ChiefEngineer
