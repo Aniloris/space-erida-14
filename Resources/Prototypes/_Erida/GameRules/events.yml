@@ -4,7 +4,6 @@
     children:
     - id: ClosetSkeleton
     - id: KingRatMigration
-    - id: NinjaSpawn
     - id: ParadoxCloneSpawn
     - id: RevenantSpawn
     - id: SleeperAgents
